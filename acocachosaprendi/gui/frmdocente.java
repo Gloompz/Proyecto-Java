@@ -1,0 +1,288 @@
+package acocachosaprendi.gui;
+
+import acocachosaprendi.implementaciones.impldocente;
+import acocachosaprendi.implementaciones.impldistrito;
+import acocachosaprendi.implementaciones.implsexo;
+import acocachosaprendi.implementaciones.impltipodocumento;
+import acocachosaprendi.implementaciones.implestadocivil;
+import acocachosaprendi.implementaciones.implgradoinstruccion;
+import acocachosaprendi.interfases.Idocente;
+import acocachosaprendi.interfases.Idistrito;
+import acocachosaprendi.interfases.Isexo;
+import acocachosaprendi.interfases.Itipodocumento;
+import acocachosaprendi.interfases.Iestadocivil;
+import acocachosaprendi.interfases.Igradoinstruccion;
+
+public class frmdocente extends javax.swing.JFrame {
+    
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(frmdocente.class.getName());
+    Itipodocumento tipodocumentos = new impltipodocumento();
+    Idistrito distritos = new impldistrito(); 
+    Isexo sexos = new implsexo();
+    Iestadocivil estadociviles = new implestadocivil();
+    Igradoinstruccion gradoinstrucciones = new implgradoinstruccion();
+    Idocente docentes = new impldocente();
+    
+
+    public frmdocente() {
+        initComponents();
+        tipodocumentos.CargarCombo(cbotipodocumento);
+        distritos.CargarCombo(cbodistrito);
+        sexos.CargarCombo(cbosexo);
+        estadociviles.CargarCombo(cboestadocivil);
+        gradoinstrucciones.CargarCombo(cbogradoinstruccion);
+        docentes.findAllCustom(jtbdocente);
+    }
+
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField11 = new javax.swing.JTextField();
+        cbotipodocumento = new javax.swing.JComboBox<>();
+        cbodistrito = new javax.swing.JComboBox<>();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        cbosexo = new javax.swing.JComboBox<>();
+        cboestadocivil = new javax.swing.JComboBox<>();
+        jLabel16 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jtbdocente = new javax.swing.JTable();
+        jLabel17 = new javax.swing.JLabel();
+        cbogradoinstruccion = new javax.swing.JComboBox<>();
+        jLabel18 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setText("Mantenimiento Docente");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 6, -1, -1));
+
+        jLabel2.setText("Codigo");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 59, -1, -1));
+
+        jLabel3.setText("Nombre");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 104, -1, -1));
+
+        jLabel4.setText("Apellido Paterno");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(377, 104, -1, -1));
+
+        jLabel5.setText("Apellido Materno");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(708, 104, -1, -1));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 56, -1, -1));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 101, 280, -1));
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 101, 205, -1));
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(827, 101, 207, -1));
+
+        jLabel6.setText("Tipo de documento");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(377, 150, -1, -1));
+        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(827, 147, 207, -1));
+
+        jLabel7.setText("Nuevo Documento");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(708, 150, -1, -1));
+
+        jLabel8.setText("Direccion");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 194, -1, -1));
+
+        jLabel9.setText("Distrito");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(377, 197, -1, -1));
+
+        jLabel10.setText("Telefono");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(708, 197, -1, -1));
+
+        jLabel11.setText("Celular");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 278, -1, -1));
+
+        jLabel12.setText("Correo");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(377, 278, -1, -1));
+
+        jLabel13.setText("Sexo");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(708, 278, -1, -1));
+
+        jLabel14.setText("Estado Civil");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 333, -1, -1));
+
+        jLabel15.setText("Estado");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 388, -1, -1));
+        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(827, 194, 207, -1));
+        getContentPane().add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 275, 285, -1));
+        getContentPane().add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 275, 205, -1));
+
+        getContentPane().add(cbotipodocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 147, 205, -1));
+
+        getContentPane().add(cbodistrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 194, 205, -1));
+
+        jCheckBox1.setText("Habilitado");
+        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 386, -1, -1));
+
+        cbosexo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbosexoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cbosexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(827, 275, -1, -1));
+
+        getContentPane().add(cboestadocivil, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 330, 286, -1));
+
+        jLabel16.setText("Fecha de Nacimiento");
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 150, -1, -1));
+        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 147, 229, -1));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 194, 285, 61));
+
+        jButton1.setText("Nuevo");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 442, -1, -1));
+
+        jButton2.setText("Registrar");
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 442, -1, -1));
+
+        jButton3.setText("Actualizar");
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 442, -1, -1));
+
+        jButton4.setText("Eliminar");
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(362, 442, -1, -1));
+
+        jButton5.setText("Habilitar");
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(485, 442, -1, -1));
+
+        jtbdocente.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jtbdocente);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 483, 1138, 305));
+
+        jLabel17.setText("Grado Instruccion");
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(377, 333, -1, -1));
+
+        getContentPane().add(cbogradoinstruccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 330, -1, -1));
+
+        jLabel18.setText("Nombre de Especializacion");
+        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(708, 333, -1, -1));
+        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(868, 330, 166, -1));
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1150, 820));
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void cbosexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbosexoActionPerformed
+
+    }//GEN-LAST:event_cbosexoActionPerformed
+
+
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
+            logger.log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(() -> new frmdocente().setVisible(true));
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> cbodistrito;
+    private javax.swing.JComboBox<String> cboestadocivil;
+    private javax.swing.JComboBox<String> cbogradoinstruccion;
+    private javax.swing.JComboBox<String> cbosexo;
+    private javax.swing.JComboBox<String> cbotipodocumento;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTable jtbdocente;
+    // End of variables declaration//GEN-END:variables
+}
